@@ -34,8 +34,8 @@ class Info(Resource):
         'id': 'nationalparks-py',
         'displayName': 'National Parks (PY)',
         'type': 'marker',
-        'center': {'latitude': '39.82', 'longitude': '-98.57'},
-        'zoom': 5
+        'center': {'latitude': '47.039304', 'longitude': '14.505178'},
+        'zoom': 4
     }
 
     def get(self):
