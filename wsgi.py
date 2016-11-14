@@ -33,7 +33,7 @@ class Info(Resource):
     description = {
         'id': 'nationalparks-py',
         'displayName': 'National Parks (PY)',
-        'type': 'marker',
+        'type': 'cluster',
         'center': {'latitude': '47.039304', 'longitude': '14.505178'},
         'zoom': 4
     }
