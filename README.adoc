@@ -1,0 +1,25 @@
+= NationalParks backend application (Python)
+
+This application is a backend that provides geolocation information about
+NationalParks. The information is stored in a mongodb
+
+== Installation
+
+Assuming you're using the project <roadshow>:
+
+----
+oc new-project roadshow
+oc create -f ./ose3/application-template.json
+oc new-app nationalparks-py
+----
+
+There's some options that can be parameterized:
+
+* APPLICATION_NAME: Name of the application
+* APPLICATION_HOSTNAME: Hostname/route to access your application
+
+Example:
+
+----
+oc new-app nationalparks-py -p APPLICATION_HOSTNAME=nationalparks-roadshow.127.0.0.1.xip.io
+----
