@@ -2,26 +2,26 @@
   "kind": "Template",
   "apiVersion": "v1",
   "metadata": {
-    "name": "mlbparks-py",
+    "name": "nationalparks-py",
     "annotations": {
       "iconClass": "icon-java",
-      "description": "Application template MBL Parks backend running on Python/Flask and using mongodb"
+      "description": "Application template National Parks backend running on Python/Flask and using mongodb"
     }
   },
   "labels": {
-    "application": "mlbparks-py",
-    "createdBy": "mlbparks-py-template"
+    "application": "nationalparks-py",
+    "createdBy": "nationalparks-py-template"
   },
   "parameters": [
     {
-      "description": "The name for the mlbparks-py application.",
+      "description": "The name for the nationalparks-py application.",
       "displayName": "Application Name",
       "name": "APPLICATION_NAME",
-      "value": "mlbparks-py",
+      "value": "nationalparks-py",
       "required": true
     },
     {
-      "description": "Custom hostname for mlbparks-py application.  Leave blank for default hostname, e.g.: <application-name>.<project>.<default-domain-suffix>",
+      "description": "Custom hostname for nationalparks-py application.  Leave blank for default hostname, e.g.: <application-name>.<project>.<default-domain-suffix>",
       "displayName": "Application route",
       "name": "APPLICATION_HOSTNAME"
     },
@@ -29,14 +29,14 @@
       "description": "The name for the mongodb application.",
       "displayName": "Mongodb App",
       "name": "MONGODB_APPLICATION_NAME",
-      "value": "mongodb-mlbparks-py",
+      "value": "mongodb-nationalparks-py",
       "required": true
     },
     {
       "description": "Git source URI for application",
       "displayName": "Git source repository",
       "name": "GIT_URI",
-      "value": "https://github.com/openshift-roadshow/mlbparks-py.git",
+      "value": "https://github.com/openshift-roadshow/nationalparks-py.git",
       "required": true
     },
     {
@@ -111,7 +111,7 @@
       "kind": "ConfigMap",
       "apiVersion": "v1",
       "metadata": {
-        "name": "mlbparks-py",
+        "name": "nationalparks-py",
         "labels": {
           "component": "config"
         }
@@ -226,7 +226,7 @@
                     "name": "MONGODB_USER",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.user"
                       }
                     }
@@ -235,7 +235,7 @@
                     "name": "MONGODB_PASSWORD",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.password"
                       }
                     }
@@ -244,7 +244,7 @@
                     "name": "MONGODB_DATABASE",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.name"
                       }
                     }
@@ -468,7 +468,7 @@
                     "name": "DB_USERNAME",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.user"
                       }
                     }
@@ -477,7 +477,7 @@
                     "name": "DB_PASSWORD",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.password"
                       }
                     }
@@ -486,7 +486,7 @@
                     "name": "DB_NAME",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "mlbparks-py",
+                        "name": "nationalparks-py",
                         "key": "db.name"
                       }
                     }
