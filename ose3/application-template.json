@@ -29,7 +29,7 @@
       "description": "The name for the mongodb application.",
       "displayName": "Mongodb App",
       "name": "MONGODB_APPLICATION_NAME",
-      "value": "mongodb-nationalparks-py",
+      "value": "mongodb",
       "required": true
     },
     {
@@ -111,7 +111,7 @@
       "kind": "ConfigMap",
       "apiVersion": "v1",
       "metadata": {
-        "name": "nationalparks-py",
+        "name": "${APPLICATION_NAME}",
         "labels": {
           "component": "config"
         }
@@ -226,7 +226,7 @@
                     "name": "MONGODB_USER",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.user"
                       }
                     }
@@ -235,7 +235,7 @@
                     "name": "MONGODB_PASSWORD",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.password"
                       }
                     }
@@ -244,7 +244,7 @@
                     "name": "MONGODB_DATABASE",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.name"
                       }
                     }
@@ -468,7 +468,7 @@
                     "name": "DB_USERNAME",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.user"
                       }
                     }
@@ -477,7 +477,7 @@
                     "name": "DB_PASSWORD",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.password"
                       }
                     }
@@ -486,7 +486,7 @@
                     "name": "DB_NAME",
                     "valueFrom": {
                       "configMapKeyRef": {
-                        "name": "nationalparks-py",
+                        "name": "${APPLICATION_NAME}",
                         "key": "db.name"
                       }
                     }
