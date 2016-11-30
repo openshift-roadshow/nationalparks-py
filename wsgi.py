@@ -52,7 +52,7 @@ class DataLoad(Resource):
         collection.remove({})
         collection.create_index([('Location', GEO2D)])
 
-        with open(DATASET_FILE, 'rb') as fp:
+        with open(DATASET_FILE, 'r') as fp:
             entries = []
 
             for data in fp.readlines():
