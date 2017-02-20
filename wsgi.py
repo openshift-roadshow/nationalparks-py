@@ -115,3 +115,7 @@ class DataWithin(Resource):
         return format_result(collection.find(query))
 
 api.add_resource(DataWithin, '/ws/data/within')
+
+@application.route('/')
+def index():
+    return 'Welcome to the National Parks data service.'
