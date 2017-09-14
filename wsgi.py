@@ -70,7 +70,7 @@ class DataLoad(Resource):
             if entries:
                 collection.insert_many(entries)
 
-        return 'Inserted %s items.' % collection.count()
+        return 'Items inserted in database: %s' % collection.count()
 
 api.add_resource(DataLoad, '/ws/data/load')
 
