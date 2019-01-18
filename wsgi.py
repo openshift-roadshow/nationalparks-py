@@ -2,6 +2,7 @@ from __future__ import print_function
 
 import os
 import json
+import re
 
 from flask import Flask, request
 from flask_restful import Resource, Api
@@ -11,6 +12,13 @@ from pymongo import MongoClient, GEO2D
 DB_URI = os.environ.get('DB_URI')
 
 DB_HOST = os.environ.get('DB_HOST', 'mongodb')
+
+if os.environ.get('uri'):
+	match = re.match("mongodb?:\/\/([^:^/]*):?(\d*)?", os.environ.get('uri'))
+    
+	if match:
+		DB_HOST = match.group(1)	
+
 DB_NAME = os.environ.get('DB_NAME', 'mongodb')
 
 DB_USERNAME = os.environ.get('DB_USERNAME', 'mongodb')
