@@ -11,7 +11,7 @@ from pymongo import MongoClient, GEO2D
 
 DB_URI = os.environ.get('DB_URI')
 
-DB_HOST = os.environ.get('DB_HOST', 'mongodb')
+DB_HOST = os.environ.get('DB_HOST', 'mongodb-nationalparks')
 DB_SERVICE_NAME = os.environ.get('DATABASE_SERVICE_NAME')
 
 if os.environ.get('uri'):
