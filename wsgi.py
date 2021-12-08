@@ -64,7 +64,7 @@ class DataLoad(Resource):
         database = client[DB_NAME]
         collection = database.nationalparks
 
-        collection.remove({})
+        collection.delete_many({})
         collection.create_index([('Location', GEO2D)])
 
         with open(DATASET_FILE, 'r') as fp:
