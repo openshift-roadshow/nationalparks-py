@@ -68,7 +68,7 @@ metadata:
   name: el-nationalparks
 spec:
   port:
-    targetPort: 8080
+    targetPort: http-listener
   to:
     kind: Service
     name: el-nationalparks

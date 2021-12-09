@@ -64,7 +64,7 @@ class DataLoad(Resource):
         database = client[DB_NAME]
         collection = database.nationalparks
 
-        collection.remove({})
+        collection.delete_many({})
         collection.create_index([('Location', GEO2D)])
 
         with open(DATASET_FILE, 'r') as fp:
@@ -85,7 +85,7 @@ class DataLoad(Resource):
             if entries:
                 collection.insert_many(entries)
 
-        return 'Items inserted in database: %s' % collection.count()
+        return 'Items inserted in database: %s' % collection.estimated_document_count()
 
 api.add_resource(DataLoad, '/ws/data/load')
 
