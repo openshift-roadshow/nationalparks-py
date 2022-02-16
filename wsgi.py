@@ -23,10 +23,10 @@ if os.environ.get('uri'):
 if DB_SERVICE_NAME:
     DB_HOST = DB_SERVICE_NAME
     
-DB_NAME = os.environ.get('DB_NAME', 'mongodb')
+DB_NAME = os.environ.get('MONGODB_DATABASE', 'mongodb')
 
-DB_USERNAME = os.environ.get('DB_USERNAME', 'mongodb')
-DB_PASSWORD = os.environ.get('DB_PASSWORD', 'mongodb')
+DB_USERNAME = os.environ.get('MONGODB_USERNAME', 'mongodb')
+DB_PASSWORD = os.environ.get('MONGODB_PASSWORD', 'mongodb')
 
 if not DB_URI:
     DB_URI = 'mongodb://%s:%s@%s:27017/%s' % (DB_USERNAME, DB_PASSWORD,
