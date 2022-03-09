@@ -2,4 +2,5 @@ mod_wsgi
 Flask==1.1.2
 flask-restful==0.3.8
 pymongo<4.0
+itsdangerous==2.0.1
 
